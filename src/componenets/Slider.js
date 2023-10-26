@@ -1,7 +1,9 @@
 import { ArrowBackIosOutlined, ArrowForwardIosOutlined } from '@mui/icons-material'
 // import React from 'react'
 import styled from 'styled-components'
-import Img from "../iphone.png"
+// import img from "../iphone.png"
+import {SliderItems} from "../Data"
+import { useState } from 'react';
 
 
 const Container = styled.div`
@@ -10,6 +12,7 @@ height: 100vh;
 display: flex;
 background-color: white;
 position: relative;
+/* overflow: hidden; */
 `;
 
 const Arrow =  styled.div`
@@ -28,10 +31,12 @@ left: ${props=> props.direction === "left" && "10px"};
 right: ${props=> props.direction === "right" && "10px"};
 cursor: pointer;
 opacity: 0.5;
+z-index: 2;
 `;
 
 const Wrapper = styled.div`
-
+display: flex;
+transform: translateX(0vw);
 `
 
 const Slide = styled.div`
@@ -39,6 +44,8 @@ display: flex;
 align-items: center;
 width: 100vw;
 height: 100vh;
+background-color: #${props=> props.bg};
+
 `
 
 const ImgContainer = styled.div`
@@ -49,7 +56,6 @@ height: 100%;
 const Image = styled.img`
 height: 80%;
 `
-
 
 const InfoContainer = styled.div`
 
@@ -71,46 +77,75 @@ const Button = styled.button`
 padding: 10px;
 font-size: 20px;
 background-color: greenyellow;
+cursor: pointer;
 `
 
 const Slider = () => {
+
+  const [slideIndex, setSlideIndex] = useState(0)
+
+  const handleClick=(direction)=>{
+
+  }
+
   return (
     <Container>
-      <Arrow direction="left"> 
+      <Arrow direction="left" onClick={()=>handleClick("left")}> 
         <ArrowBackIosOutlined />
       </Arrow>
 
       <Wrapper>
-        <Slide>
+
+        {SliderItems.map((item)=>(
+          
+          <Slide bg={item.bg}>
+
+          <ImgContainer>
+          <Image src= {item.img}/>
+          </ImgContainer>
+  
+          <InfoContainer>
+            <Title>{item.title}</Title>
+            <Desc>{item.desc}</Desc>
+            <Button>SHOP NOW</Button>
+          </InfoContainer>
+  
+          </Slide>
+          
+        ))}
+
+        
+
+        {/* <Slide bg="ccff00">
 
         <ImgContainer>
         <Image src= {Img}/>
         </ImgContainer>
 
         <InfoContainer>
-          <Title>SUMMER SALE</Title>
-          <Desc>DONT COMPORMISE ON JVJHBJKHDECHJYHKTXRRFTYJBERTJCETJKJ</Desc>
+          <Title>WINTER SALE</Title>
+          <Desc>KIDS BICYCLE ALLOWS CHILDREN TO EXPERIENCE GREAT ADVENTURES ON WHEELS. CHILDREN SHOULD BE GUIDED </Desc>
           <Button>SHOP NOW</Button>
         </InfoContainer>
 
         </Slide>
 
-        <Slide>
+        <Slide bg="A500FF">
 
         <ImgContainer>
         <Image src= {Img}/>
         </ImgContainer>
 
         <InfoContainer>
-          <Title>SUMMER SALE</Title>
-          <Desc>DONT COMPORMISE ON JVJHBJKHDECHJYHKTXRRFTYJBERTJCETJKJ</Desc>
+          <Title>POPULAR SALE</Title>
+          <Desc>KIDS BICYCLE ALLOWS CHILDREN TO EXPERIENCE GREAT ADVENTURES ON WHEELS. CHILDREN SHOULD BE GUIDED </Desc>
           <Button>SHOP NOW</Button>
         </InfoContainer>
 
-        </Slide>
+        </Slide> */}
       </Wrapper>
 
-      <Arrow direction="right">
+      <Arrow direction="right"  onClick={()=>handleClick("right")}>
         <ArrowForwardIosOutlined />
       </Arrow>
     </Container>
