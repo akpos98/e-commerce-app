@@ -104,7 +104,7 @@ const Slider = () => {
 
         {SliderItems.map((item)=>(
           
-          <Slide bg={item.bg}>
+          <Slide bg={item.bg} key={item.id}>
 
           <ImgContainer>
           <Image src= {item.img}/>
@@ -122,33 +122,7 @@ const Slider = () => {
 
         
 
-        {/* <Slide bg="ccff00">
-
-        <ImgContainer>
-        <Image src= {Img}/>
-        </ImgContainer>
-
-        <InfoContainer>
-          <Title>WINTER SALE</Title>
-          <Desc>KIDS BICYCLE ALLOWS CHILDREN TO EXPERIENCE GREAT ADVENTURES ON WHEELS. CHILDREN SHOULD BE GUIDED </Desc>
-          <Button>SHOP NOW</Button>
-        </InfoContainer>
-
-        </Slide>
-
-        <Slide bg="A500FF">
-
-        <ImgContainer>
-        <Image src= {Img}/>
-        </ImgContainer>
-
-        <InfoContainer>
-          <Title>POPULAR SALE</Title>
-          <Desc>KIDS BICYCLE ALLOWS CHILDREN TO EXPERIENCE GREAT ADVENTURES ON WHEELS. CHILDREN SHOULD BE GUIDED </Desc>
-          <Button>SHOP NOW</Button>
-        </InfoContainer>
-
-        </Slide> */}
+        
       </Wrapper>
 
       <Arrow direction="right"  onClick={()=>handleClick("right")}>
