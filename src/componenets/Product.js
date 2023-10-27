@@ -4,6 +4,44 @@ import styled from 'styled-components'
 
 
 
+const Info = styled.div`
+
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+background-color: gray;
+z-index: 3;
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+
+
+/* opacity: 0; */
+/* width: 100%;
+height: 100%;
+position: absolute; */
+/* margin-top: 80%; */
+/* top: 0;
+left: 0;
+background-color: rgba(0,0,0,0.2);
+z-index: 3;
+display: flex;
+align-content: center;
+justify-content: center; */
+/* border: 1px solid red; */
+/* transition: all 0.5s ease; */
+
+
+
+/* width: 100px;
+height: 100px; */
+`;
+
+
 
 const Container = styled.div`
 flex: 1;
@@ -13,17 +51,23 @@ margin: 5px;
 display: flex;
 align-items: center;
 justify-content: center;
-background-color: azure;
-border-radius: 20px;
+background-color: #F6F8FB;
 position: relative;
+border-radius: 20px;
+
+
+
+/* &:hover ${Info}{
+  opacity: 1;
+} */
 `;
 
 const Circle = styled.div`
-height: 200px;
+/* height: 200px;
 width: 200px;
 border-radius: 50%;
-background-color: blue;
-position: absolute;
+background-color: white;
+position: absolute; */
 `;
 
 const Image = styled.img`
@@ -31,31 +75,23 @@ height: 250px;
 z-index: 2;
 `;
 
-const Info = styled.div`
-width: 100%;
-height: 100%;
-position: absolute;
-top: 0;
-left: 0;
-background-color: gray;
-z-index: 3;
-display: flex;
-align-content: center;
-justify-content: center;
-
-/* width: 100px;
-height: 100px; */
-`;
 
 const Icon = styled.div`
-width: 40px;
+/* width: 40px; 
 height: 40px;
 border-radius: 50%;
-background-color: black;
+background-color: white;
 display: flex;
 align-items: center;
-align-items: center;
-justify-content: center;
+justify-content: center; 
+margin: 10px;  
+transition: all 0.5s ease;
+cursor: pointer; */
+
+/* &:hover{
+  background-color: white;
+  transform: scale(1.1);
+} */
 `;
 
 

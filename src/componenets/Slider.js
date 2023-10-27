@@ -4,6 +4,8 @@ import styled from 'styled-components'
 // import img from "../iphone.png"
 import {SliderItems} from "../Data"
 import { useState } from 'react';
+// import phone from "../src/iphone.png"
+
 
 
 const Container = styled.div`
