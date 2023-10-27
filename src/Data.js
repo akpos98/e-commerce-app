@@ -1,4 +1,6 @@
 import phone from "../src/iphone.png"
+import dress from "../src/images/Dress.png"
+import Laptop from "../src/images/laptop.png"
 
 export const SliderItems = [
 
@@ -12,8 +14,8 @@ export const SliderItems = [
   
     {
         id:2,
-        img: phone,
-      title: "Nike Air Vapormax Plus",
+        img: dress,
+      title: "SUMMER WEARS",
       desc: "KIDS BICYCLE ALLOWS CHILDREN TO EXPERIENCE GREAT ADVENTURES ON WHEELS. CHILDREN SHOULD BE GUIDED",
       bg:"E5E1E6" ,
     },
@@ -21,8 +23,8 @@ export const SliderItems = [
   
     {
         id:3,
-        img: phone,
-      title: "Nike Waffle One Sneaker",
+        img: Laptop,
+      title: "GADGET SALES",
       desc: "KIDS BICYCLE ALLOWS CHILDREN TO EXPERIENCE GREAT ADVENTURES ON WHEELS. CHILDREN SHOULD BE GUIDED",
       bg:"E4F8F0 "
     },

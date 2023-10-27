@@ -5,35 +5,19 @@ import styled from 'styled-components'
 
 
 const Info = styled.div`
-
+opacity: 0;
 width: 100%;
 height: 100%;
 position: absolute;
 top: 0;
 left: 0;
-background-color: gray;
+background-color: rgba(5,7,0,0.2);
 z-index: 3;
 display: flex;
 align-items: center;
 justify-content: center;
-
-
-
-
-/* opacity: 0; */
-/* width: 100%;
-height: 100%;
-position: absolute; */
-/* margin-top: 80%; */
-/* top: 0;
-left: 0;
-background-color: rgba(0,0,0,0.2);
-z-index: 3;
-display: flex;
-align-content: center;
-justify-content: center; */
-/* border: 1px solid red; */
-/* transition: all 0.5s ease; */
+border-radius: 20px;
+transition: all 0.5s ease;
 
 
 
@@ -57,17 +41,17 @@ border-radius: 20px;
 
 
 
-/* &:hover ${Info}{
+&:hover ${Info}{
   opacity: 1;
-} */
+}
 `;
 
 const Circle = styled.div`
-/* height: 200px;
+height: 200px;
 width: 200px;
 border-radius: 50%;
 background-color: white;
-position: absolute; */
+position: absolute;
 `;
 
 const Image = styled.img`
@@ -77,7 +61,7 @@ z-index: 2;
 
 
 const Icon = styled.div`
-/* width: 40px; 
+width: 40px; 
 height: 40px;
 border-radius: 50%;
 background-color: white;
@@ -86,12 +70,12 @@ align-items: center;
 justify-content: center; 
 margin: 10px;  
 transition: all 0.5s ease;
-cursor: pointer; */
+cursor: pointer;
 
-/* &:hover{
+&:hover{
   background-color: white;
   transform: scale(1.1);
-} */
+}
 `;
 
 
