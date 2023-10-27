@@ -12,7 +12,7 @@ height: 100vh;
 display: flex;
 background-color: white;
 position: relative;
-/* overflow: hidden; */
+overflow: hidden;
 `;
 
 const Arrow =  styled.div`
@@ -36,7 +36,8 @@ z-index: 2;
 
 const Wrapper = styled.div`
 display: flex;
-transform: translateX(0vw);
+transition: all 1.5s ease;
+transform: translateX(${props=>props.slideIndex * -100}vw);
 `
 
 const Slide = styled.div`
@@ -86,6 +87,11 @@ const Slider = () => {
 
   const handleClick=(direction)=>{
 
+    if(direction === "left"){
+      setSlideIndex(slideIndex > 0 ? slideIndex-1 : 2)
+    }else{
+      setSlideIndex(slideIndex < 2 ? slideIndex+1 : 0)
+    }
   }
 
   return (
@@ -94,7 +100,7 @@ const Slider = () => {
         <ArrowBackIosOutlined />
       </Arrow>
 
-      <Wrapper>
+      <Wrapper slideIndex={slideIndex}>
 
         {SliderItems.map((item)=>(
           

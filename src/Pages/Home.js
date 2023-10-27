@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../componenets/NavBar'
 import Announcement from '../componenets/Announcement'
 import Slider from '../componenets/Slider'
+import Categories from '../componenets/Categories'
 
 
 
@@ -12,6 +13,7 @@ const Home = () => {
       <Announcement/>
       <NavBar/>
       <Slider/>
+      <Categories/>
     </div>
   )
 }
