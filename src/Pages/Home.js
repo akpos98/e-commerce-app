@@ -5,6 +5,7 @@ import Slider from '../componenets/Slider'
 import Categories from '../componenets/Categories'
 import Products from '../componenets/Products'
 import NewsLetter from '../componenets/NewsLetter'
+import Footer from '../componenets/Footer'
 
 
 
@@ -18,6 +19,7 @@ const Home = () => {
       <Categories/>
       <Products />
       <NewsLetter />
+      <Footer />
     </div>
   )
 }

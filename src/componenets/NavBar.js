@@ -35,7 +35,7 @@ padding: 5px;
 `;
 
 const Input = styled.div`
-width: 200px;
+width: 400px;
 `;
 
 const Center = styled.div`

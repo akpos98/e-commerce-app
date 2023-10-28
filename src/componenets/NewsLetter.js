@@ -9,6 +9,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+background-color: aqua;
 `
 
 const Title = styled.h1`
@@ -42,6 +43,7 @@ const Input = styled.input`
 width: 500px;
 
 padding-left: 20px;
+background-color: white;
 /* border: none; */
 `
 
