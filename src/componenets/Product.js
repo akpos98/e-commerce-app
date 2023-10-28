@@ -11,7 +11,7 @@ height: 100%;
 position: absolute;
 top: 0;
 left: 0;
-background-color: rgba(5,7,0,0.2);
+background-color: rgba(5,7,0,0.1);
 z-index: 3;
 display: flex;
 align-items: center;

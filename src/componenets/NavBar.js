@@ -70,7 +70,7 @@ const NavBar = () => {
     <Left>
       <Language>EN</Language>
       <SearchContainer>
-        <Input/>
+        <Input placeholder='Ener Search'/>
         <Search style={{color:"gray", fontSize:"16px"}}/>
       </SearchContainer>
     </Left>
