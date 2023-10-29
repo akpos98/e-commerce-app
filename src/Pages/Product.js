@@ -85,27 +85,40 @@ const FilterSizeOption = styled.option`
 `;
 
 const AddContainer = styled.div`
-
+width: 50%;
+display: flex;
+align-items: center;
+justify-content: space-between;
 `;
 
 const AmountContainer = styled.div`
-
-`;
-
-const Remove = styled.div`
-
+display: flex;
+align-items: center;
+font-weight: 600;
 `;
 
 const Amount = styled.span`
-
-`;
-
-const Add = styled.div`
-
+width: 30px;
+height: 30px;
+border-radius: 10px;
+border: 1px solid teal;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0px 5px;
 `;
 
 const Button = styled.button`
+padding: 15px;
+border: 1px solid teal;
+background-color: white;
+border-radius: 10px;
+cursor: pointer;
+font-weight: 400;
 
+&:hover{
+  background-color: blue;
+}
 `;
 
 
