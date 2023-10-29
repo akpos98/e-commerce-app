@@ -5,6 +5,7 @@ import Announcement from '../componenets/Announcement'
 import NavBar from '../componenets/NavBar'
 import NewsLetter from "../componenets/NewsLetter"
 import Footer from "../componenets/Footer"
+import { Add, Remove } from '@mui/icons-material'
 
 
 
@@ -42,23 +43,71 @@ margin: 20px 10px;
 
 const Price = styled.p`
 margin: 0px 10px;
-
+font-size: 40px;
+font-weight: 100;
 `;
 
 const FilterContainer = styled.div`
+width: 50%;
+margin: 30px 0px;
 display: flex;
 justify-content: space-between;
 `;
 
-const Filter= styled.div``;
+const Filter= styled.div`
+display: flex;
+align-items: center;
+`;
 
-const FilterTitle = styled.div``;
+const FilterTitle = styled.span`
+font-size: 24px;
+`;
 
-const FilterColor = styled.div``;
+const FilterColor = styled.div`
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background-color: ${props=>props.color};
+margin: 0px 5px;
+cursor: pointer;
+`;
 
-const FilterSize = styled.div``;
+const FilterSize = styled.select`
+font-size: 20px;
+background-color: azure;
+border-radius: 5px;
+margin-left: 20px;
+padding: 5px;
+`;
 
-const FilterSizeOption = styled.div``;
+const FilterSizeOption = styled.option`
+
+`;
+
+const AddContainer = styled.div`
+
+`;
+
+const AmountContainer = styled.div`
+
+`;
+
+const Remove = styled.div`
+
+`;
+
+const Amount = styled.span`
+
+`;
+
+const Add = styled.div`
+
+`;
+
+const Button = styled.button`
+
+`;
+
 
 
 
@@ -85,32 +134,43 @@ const Product = () => {
             condimentum ac, volutpat ornare.
             </Desc>
             <Price>$ 50.00</Price>
-        </InfoContainer>
 
-        <FilterContainer>
+            <FilterContainer>
         
-        <Filter>
-          <FilterTitle>Color</FilterTitle>
-          <FilterColor color="black"/>
-          <FilterColor color="darkblue"/>
-          <FilterColor color="gray"/>
-        </Filter>
+              <Filter>
+                <FilterTitle>Color</FilterTitle>
+                <FilterColor color="black"/>
+                <FilterColor color="darkblue"/>
+                <FilterColor color="gray"/>
+              </Filter>
 
-        <Filter>
-          <FilterTitle>Sizes</FilterTitle>
+              <Filter>
+                <FilterTitle>Sizes</FilterTitle>
 
-          <FilterSize>
+                <FilterSize>
 
-          <FilterSizeOption>XS</FilterSizeOption>
-          <FilterSizeOption>S</FilterSizeOption>
-          <FilterSizeOption>M</FilterSizeOption>
-          <FilterSizeOption>L</FilterSizeOption>
-          <FilterSizeOption>XL</FilterSizeOption>
+                <FilterSizeOption>XS</FilterSizeOption>
+                <FilterSizeOption>S</FilterSizeOption>
+                <FilterSizeOption>M</FilterSizeOption>
+                <FilterSizeOption>L</FilterSizeOption>
+                <FilterSizeOption>XL</FilterSizeOption>
 
-          </FilterSize>
-        </Filter>
+                </FilterSize>
+              </Filter>
 
-      </FilterContainer>
+            </FilterContainer>
+
+              <AddContainer>
+
+                <AmountContainer>
+                <Remove/>
+                <Amount>1</Amount>
+                  <Add/>
+                </AmountContainer>
+                <Button>Add to Cart</Button>
+              </AddContainer>
+
+              </InfoContainer>
 
         </Wrapper>
 
